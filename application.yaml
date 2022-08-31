@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/dbanieles/argocd-test.git
-    targetRevision: master
+    targetRevision: HEAD
     path: dev/restapi
   destination:
     server: https://kubernetes.default.svc
