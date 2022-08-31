@@ -1,17 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: restapi
+  name: demo-app
 spec:
-  project: default
+  project: restapi
   source:
-    repoURL: https://github.com/dbanieles/argocd-test.git
+    repoURL: https://github.com/arthurk/argocd-example-install.git
     targetRevision: HEAD
     path: dev
   destination:
-    server: https://D927E17A7D817911A6D0CB2DFF394C57.gr7.us-east-1.eks.amazonaws.com
+    server: https://kubernetes.default.svc
     namespace: distribution
-  syncPolicy:
     syncOptions:
       - CreateNamespace=true
     automated:
