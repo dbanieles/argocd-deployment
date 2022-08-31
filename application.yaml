@@ -1,17 +1,19 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: demo-app
+  name: restapi
+  namespace: argocd
 spec:
   project: restapi
   source:
     repoURL: https://github.com/dbanieles/argocd-test.git
-    targetRevision: HEAD
+    targetRevision: master
     path: dev/restapi
   destination:
     server: https://kubernetes.default.svc
     namespace: distribution
+  syncPolicy:
     syncOptions:
-      - CreateNamespace=true
+    - CreateNamespace=true
     automated:
       selfHeal: true
