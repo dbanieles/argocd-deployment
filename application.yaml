@@ -5,7 +5,7 @@ metadata:
 spec:
   project: restapi
   source:
-    repoURL: https://github.com/arthurk/argocd-example-install.git
+    repoURL: https://github.com/dbanieles/argocd-test.git
     targetRevision: HEAD
     path: dev
   destination:
