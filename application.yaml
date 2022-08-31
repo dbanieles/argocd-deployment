@@ -4,7 +4,7 @@ metadata:
   name: restapi
   namespace: argocd
 spec:
-  project: restapi
+  project: default
   source:
     repoURL: https://github.com/dbanieles/argocd-test.git
     targetRevision: master
